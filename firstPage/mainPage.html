@@ -3,23 +3,19 @@
 <head>
 		<style type="text/css">
 			body{
-				background-image: url("image15.jpg");
-				/*background-repeat: no-repeat;*/
+				background-image: url("image.png");
 			}
 			header{
-				background-color: rgba(210, 121, 166, 0.28);
 				border-radius: 5px;
-				/*background-color: rgba(205, 214, 219, 0.3);*/
-			}
-			.receips{
+				background-image: url("img.png");
+				background-repeat: no-repeat;
 				display: flex;
-				justify-content: center;
-				align-items: center;
-				/*background-image: url(image.png);*/
 			}
+			/*.receips{
+				background-image: url("https://media.bakingo.com/sites/default/files/bkssr/static/media/photo_cakes_bg.a1c9ec30.png");
+			}*/
 			#card{
 				display:flex;
-				border: 5px solid pink;
 				border-radius: 10px;
 				width: 320px;
 				margin:5px;
@@ -36,12 +32,9 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;	
-				/*background-color: mistyrose;*/
-				/*background-color: rgba(210, 121, 166, 0.28);*/
 			}
 			nav a{
 				text-decoration: none;
-			    background-color: mistyrose;
 			    color: palevioletred;
 			    border-radius: 6px;
 			    width: 150px;
@@ -49,60 +42,80 @@
 		  		display: flex;
 				justify-content: center;
 				align-items: center;
-				background-color: rgba(210, 121, 166, 0.28);
-			}
-			nav select{
-				/*background-color: mistyrose;*/
-				background-color: rgba(210, 121, 166, 0.28);
-				width: 150px;
-				height: 50px;
-				border-radius: 6px;
-				color: palevioletred;
-				border-color: rgba(210, 121, 166, 0.28);
 			}
 			nav :hover{
-			background-color: white;
+				background-color: white;
 			}
 			#info{
 				position: absolute;
 				top:50px;
 				right: 100px;
+				text-decoration: none;
+				background-color: white;
+				width:120px;
+				border-radius: 20px;
+			}
+			#info img{
+				border-radius: 20px;
+			}
+			#info a{
+				text-decoration: none;
+				color: palevioletred;
 			}
 			#sbutton{
 				position: absolute;
 				top:100px;
 				right:50px;
 			}
+			input[type="text"]{
+				height:25px;
+				width:300px;
+				border: none;
+				border-radius: 30px;
+				padding: 10px;
+			}
+			input[type="submit"]{
+				background-image: url("img2.png");
+				background-size: 100%;
+				background-repeat: no-repeat;
+				width: 25px;
+    			height: 25px;
+				position: absolute;
+			    top: 25%;
+			    border: none;
+			    right: 35px;
+			}
+			footer{
+				display: block;
+				background-image: url("footer.png");
+				background-repeat: no-repeat;
+				background-size: cover;
+				height:300px;
+			}
+			footer img{
+				padding: 120px;
+			}
 		</style>
 </head>
 <body>
 	<header>
-		<img src="https://i.pinimg.com/originals/f7/e7/e6/f7e7e695954e5d171eae9b6076baf479.png" width="150px" height="100px"\>
+		<img src="img.png"\>
 		<nav>
         <a href="#">Десерты</a>
         <a href="#">Калькулятор</a>
-        <select>
-			<option>Добавить свой рецепт</option>
-			<option><a href="#">Добавить</a></option>
-			<option><a href="#">Продукты</a></option>
-		</select>
         <a href="#">Полезное</a>
         <a href="#">Другое</a>
+        <a href="#">Добавить рецепт</a>
       </nav>
       <div id="info">
-      	<img src="https://img.icons8.com/ios/452/edit-user-male.png" width="20px" height="20px"/>
       	<a href="#">Регистрация</a>
+      	<img src="img3.jpg" width="20px" height="20px"/>
       </div>
       <div id="sbutton">
-      	<input type="search" name="search" placeholder="Search..."/>
-      	<button>Search</button>
+      	<input type="text" value name="search" placeholder="Search..."/>
+      	<input type="submit" value/>
       </div>
 	</header>
-	<div id="pages">
-			<a href="#">1</a>
-			<a href="#">2</a>
-			<a href="#">3</a>
-	</div>
 	<section class="receips">
 		<div id="cardsReceip">
 			<div id="card">
@@ -135,8 +148,19 @@
 				<div id="text"></div>
 				<div id="price"></div>
 			</div>
+			<div id="card">
+				<img src="img4.jpg" width="150" height="130"/></a></h1>
+				<h3><a href="#">Прага</a></h3>
+				<div id="text"></div>
+				<div id="price"></div>
+			</div>
 		</div>
 	</section>
+	<footer class="footer">
+		<img src="img212.png" width="100px" height="100px"/>
+		<div id="contact">Contact Us</div>
+		<div id="find">Find</div>
+	</footer>
 </body>
 </html>
 
