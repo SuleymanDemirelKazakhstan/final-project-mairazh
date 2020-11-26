@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<style >
+		
+		body{
+			margin:0;
+			font-family: 'Montserrat', sans-serif;
+
+			font-size: 15px;
+			line-height: 1.7;
+			color: #333;
+		}
+
+		*{
+			margin: 0;
+			padding:0;
+			list-style:none;
+			text-decoration: none;
+		}
+
+		*, *:before, *:after{
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		/* header */
+
+		.header{
+			width: 100%;
+			height: 80px;
+			display: block;
+			background-color: darkred;/*#101010;*/
+		}
+
+		.header_in{
+			width: 1000px;
+			height: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+
+		.logo_container{
+			height: 100%;
+			display: table;
+			float: left;
+		}
+
+		.logo_container img{
+		    display: table-cell;
+		    vertical-align: middle;
+		}
+
+		.nav{
+			float: right;
+			height: 100%;
+		}
+
+		.nav li{
+			height: 100%;
+			display: table;
+			float: left;
+			padding: 0px 20px;
+		}
+
+		.nav li:last-child{
+			padding-right:0;
+		}
+		.nav li a{
+			display: table-cell;
+			vertical-align: middle;
+			height: 100%;
+			color: white;
+			font-family: "Kaushan Script";
+			font-size: 16px;
+		}
+		.nav_link:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: indianred;
+			opacity: 0;
+			transition: opacity .2s linear
+		}
+		a.nav_link:hover{
+			color: indianred;
+		}
+		a.nav_link:hover:after{
+			opacity: 1;
+		}
+
+		/*container*/
+
+		.container{
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		/*Intro big image*/
+
+		.intro{
+			width: 100%;
+			height: 100vh;
+
+			background: url(background.jpg) center no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		.intro_inner{
+			width: 100%;
+			max-width: 880px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.intro_title{
+			font-size: 120px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #fff;
+			line-height: 1;
+		}
+
+		.intro_title:after{
+			content: "";
+			display: block;
+			width: 60px;
+			height: 3px;
+			background-color: #fff;
+			margin: 40px auto;
+		}
+
+		.intro_subtitle{
+			font-size: 60px;
+			color: #fff;
+			font-family: "Kaushan Script";
+		}
+
+		/* Learn button */
+		
+		#learn_button{
+			display: inline-block;
+			vertical-align: top;
+			padding: 8px 30px;
+
+			border: 3px solid #fff;
+
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			text-transform: uppercase;
+
+			transition: background .1s linear, color .1s linear;
+		}
+
+		#learn_button:hover{
+			background-color: #fff;
+			color: #333;
+		}
+/*
+		.slider{
+			width: 100%;
+		}
+*/
+		.slider_inner{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 80px;
+		}
+
+		.slider_item{
+			width: 22%;
+			padding: 20px 0;
+			position: relative;
+
+			border-top: 3px solid #fff;
+			opacity: 0.7;
+
+			font-size: 18px;
+			color: #fff;
+			text-transform: uppercase;
+		}
+
+		.slider_item.active{
+			opacity: 1;
+		}
+
+		.slider_item.active:before{
+			content: "";
+			display: block;
+		 	width: 70px;
+		 	height: 3px;
+
+		 	background-color: darkred;
+
+		 	position: absolute;
+		 	top: -3px;
+		 	left: 0;
+		 	z-index: 1;	
+		}
+
+		.slider_num{
+			font-size: 24px;
+			font-weight: 700;
+
+		}
+
+		/* About */
+
+		#about{
+			padding: 50px 5px;
+		}
+		#about_section{
+			width: 100%;
+			max-width: 950px;
+			margin: 0 auto 40px;
+			text-align: center;
+		}
+		#about_title{
+			font-family: "Kaushan Script";
+		}
+		#about_title:after{
+			content: "";
+			display: block;
+			width: 60px;
+			height: 3px;
+			margin: 30px auto;
+			background-color: darkred;
+		}
+		#about_text{
+			color: #999;
+			font-size: 15px;
+			font-family: helvetica;
+		}
+
+		.about_inner{
+			display: flex;
+			width: 100%;
+			max-width: 800px;
+		}
+
+		.about_item{
+			flex: 1;
+			border-right: 1px solid #999;
+			padding: 10px 30px 0;
+			color: #999;
+		}
+
+		.about_buttons{
+			padding: 10px 30px 0;
+			display: grid;
+			grid-template-rows: auto auto;
+			grid-gap: 20px;
+		}
+
+		.about_bt{
+			padding: 15px 30px;
+
+			border: 3px solid darkred;
+			color: darkred;
+			font-weight: 700;
+
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.about_bt:hover{
+			color: white;
+			background-color: darkred;
+
+			transition: background .1s linear, color .1s linear
+		}
+
+
+	</style>
+<body>
+
+<div class="header">
+	<div class="header_in">
+		<div class="logo_container">
+			<img src="logotip.png" width="70px" height="70px">
+		</div>
+
+		<ul class="nav">
+			<li><a class="nav_link" href="#">Home</a></li>
+			<li><a class="nav_link" href="#">Menu</a></li>
+			<li><a class="nav_link" href="#">About Us</a></li>
+			<li><a class="nav_link" href="#">Contacts</a></li>
+			<li><a class="nav_link" href="#">Calculator</a></li>
+		</ul>
+
+	</div>
+</div>
+
+<div class="intro">
+	<div class="container">
+		<div class="intro_inner">
+			<h2 class="intro_subtitle">Creative pastry shop</h2>
+			<h1 class="intro_title">Welcome to baker's</h1>
+
+			<a id="learn_button" href="#">Learn More</a>
+		</div>
+	</div>
+
+	<div class="slider">
+		<div class="container">
+			<div class="slider_inner">
+				<div class="slider_item active">
+					<span class="slider_num">01 </span>
+					Intro
+				</div>
+				<div class="slider_item">
+					<span class="slider_num">02 </span>
+					About Us
+				</div>
+				<div class="slider_item">
+					<span class="slider_num">03 </span>
+					Menu
+				</div>
+				<div class="slider_item">
+					<span class="slider_num">04 </span>
+					Contacts
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<section id="about">
+	<div class="container">
+
+		<div id="about_section">
+			<h1 id="about_title">ABOUT US</h1>
+			<div id="about_text">
+				<p >We are not just a bakery, we are not just bakers.</p>
+			</div>
+	    </div>
+
+
+		<div class="about_inner">
+			<div class="about_item">
+				<p class="about_text">In fact, we are just like you, a bunch of food lovers fascinated with sweet indulgence, who dreamt of creating an appetizing fairy land of divine delicacies that relishes the utmost desires.</p>
+			</div>
+			<div class="about_item">
+				<p class="about_text"> We located Almaty city Al-Farabi street. We invite you to our bakery, our team will certainly wait for you. </p>
+			</div>
+
+			<div class="about_buttons">
+				<a class="about_bt" href="registration.html">Registration</a>
+				<a class="about_bt" href="#">Add</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+</body>
+</html>
+
+<!-- We are not just a bakery, we are not just bakers. In fact, we are just like you, a bunch of food lovers fascinated with sweet indulgence, who dreamt of creating an appetizing fairy land of divine delicacies that relishes the utmost desires. We located Almaty city Al-Farabi street. 
+Come, we will certainly wait for you // We invite you to our bakery, We will certainly wait for you -->
