@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&display=swap" rel="stylesheet">
+
+	<style>
+		
+		body{
+			margin:0;
+			font-size: 15px;
+			line-height: 1.7;
+			color: #333;
+			font-family: "Castoro";
+		}
+
+		*{
+			margin: 0;
+			padding:0;
+			list-style:none;
+			text-decoration: none;
+		}
+
+		*, *:before, *:after{
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		/* header */
+
+		.header{
+			width: 100%;
+			height: 80px;
+			display: block;
+			background-color: darkred;/*#101010;*/
+		}
+
+		.header_in{
+			width: 1000px;
+			height: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+
+		.logo_container{
+			height: 100%;
+			display: table;
+			float: left;
+		}
+
+		.logo_container img{
+		    display: table-cell;
+		    vertical-align: middle;
+		}
+
+		.nav{
+			float: right;
+			height: 100%;
+		}
+
+		.nav li{
+			height: 100%;
+			display: table;
+			float: left;
+			padding: 0px 20px;
+		}
+
+		.nav li:last-child{
+			padding-right:0;
+		}
+		.nav li a{
+			display: table-cell;
+			vertical-align: middle;
+			height: 100%;
+			color: white;
+			font-family: "Kaushan Script";
+			font-size: 16px;
+		}
+		.nav_link:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: indianred;
+			opacity: 0;
+			transition: opacity .2s linear
+		}
+		a.nav_link:hover{
+			color: indianred;
+		}
+		a.nav_link:hover:after{
+			opacity: 1;
+		}
+
+		/*container*/
+
+		.container{
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		/* heading */
+
+		.heading{
+			margin: 50px 0 20px;
+		}
+
+		.txt{
+			font-size: 45px;
+		}
+
+		/* Element */
+
+		.element_items{
+			display: flex;
+		}
+
+		.element_info{
+			margin-left: 60px;
+			margin-top: 20px;
+			padding: 10px;
+		}
+
+
+		.element_button{
+			margin: 50px 0 40px;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.element_image{
+			margin: 10px 10px 30px;
+		}
+
+		.element_image img{
+			border-radius: 20px;
+		}
+
+		.svg_icon, .element_price_rating{
+			margin-top: 20px;
+		}
+
+		.element_button a{
+			border: 3px solid darkred;
+			padding: 10px 50px;
+			background-color: indianred;
+			color: white;
+		}
+
+		.element_button:hover a{
+			background-color: darkred;
+			border: #333;
+		}
+
+
+
+		
+
+
+
+		/* footer */
+
+		.footer{
+			background-color: indianred;
+			position: relative;
+			bottom: 0;
+		}
+
+		.footer_inner{
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 20px;
+			margin-top: 20px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&display=swap" rel="stylesheet">
+
+	<div class="header">
+	<div class="header_in">
+		<div class="logo_container">
+			<img src="logotip.png" width="70px" height="70px">
+		</div>
+
+		<ul class="nav">
+			<li><a class="nav_link" href="#">Home</a></li>
+			<li><a class="nav_link" href="#menu_lists">Menu</a></li>
+			<li><a class="nav_link" href="#">About Us</a></li>
+			<li><a class="nav_link" href="#">Contacts</a></li>
+			<li><a class="nav_link" href="#">Calculator</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="element">
+	<div class="container">
+
+		<div class="heading">
+			<div class="header_text"><p class="txt">Апельсиновый торт</p></div>
+		</div>
+
+		<div class="element_items">
+			<div class="element_image">
+				<img src="type4.jpg" width="380px" height="530px" />
+			</div>
+			<div class="element_info">
+				<div class="element_definition">This is a very sweet frosting - it reminds me of maple candy.</div>
+
+				<div class="svg_icon">
+					<svg id="color" enable-background="new 0 0 24 24" height="40" viewBox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><path d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z" fill="#ffc107"/></svg>
+				</div>
+
+
+				<div class="element_price_rating">
+					<div class="element_price"><strong>Price:</strong> 200$</div>
+					<div class="element_rating"><strong>Ratings:</strong> </div>
+				</div>
+				<div class="element_button">
+					<div class="element_buy"><a href="">Buy</a></div>
+					<div class="element_save"><a href="">Save</a></div>
+				</div>
+				<div class="element_prep">
+					<strong>Preparation:</strong>
+					<a href="https://www.youtube.com/watch?v=xqA4fmXCSv8"> Ссылка для торта</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+
+<div class="footer"> 
+	<div class="container">
+		<div class="footer_inner">
+			<div class="footer_item">
+				<p>Find Us:
+					<a href=""><img id="icon" src="insta.png" width="20px" height="20px"></a>
+					<a href=""><img id="icon" src="face.png" width="20px" height="20px"></a>
+				</p>
+			</div>
+			<div class="footer_item">
+				<p>Contacts:  +7 701 777 77 77</p>
+			</div>
+			<div class="footer_item">
+				<p>Location:  Kazakhstan, Almaty</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

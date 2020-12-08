@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+	<style >
+		
+		body{
+			margin:0;
+			font-family: 'Montserrat', sans-serif;
+
+			font-size: 15px;
+			line-height: 1.7;
+			color: #333;
+		}
+		*{
+			margin: 0;
+			padding:0;
+			list-style:none;
+			text-decoration: none;
+		}
+
+		*, *:before, *:after{
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		/* header */
+		.header{
+			width: 100%;
+			height: 80px;
+			display: block;
+			background-color: darkred;/*#101010;*/
+		}
+		.header_in{
+			width: 1000px;
+			height: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+		.logo_container{
+			height: 100%;
+			display: table;
+			float: left;
+		}
+		.logo_container img{
+		    display: table-cell;
+		    vertical-align: middle;
+		}
+		.nav{
+			float: right;
+			height: 100%;
+		}
+		.nav li{
+			height: 100%;
+			display: table;
+			float: left;
+			padding: 0px 20px;
+		}
+		.nav li:last-child{
+			padding-right:0;
+		}
+		.nav li a{
+			display: table-cell;
+			vertical-align: middle;
+			height: 100%;
+			color: white;
+			font-family: "Kaushan Script";
+			font-size: 16px;
+		}
+		.nav_link:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: indianred;
+			opacity: 0;
+			transition: opacity .2s linear
+		}
+		a.nav_link:hover{
+			color: indianred;
+		}
+		a.nav_link:hover:after{
+			opacity: 1;
+		}
+		/*container*/
+		.container{
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		/*Intro big image*/
+		.intro{
+			width: 100%;
+			height: 100vh;
+
+			background: url(background.jpg) center no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.intro_inner{
+			width: 100%;
+			max-width: 880px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.intro_title{
+			font-size: 110px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #fff;
+			line-height: 1;
+		}
+		.intro_title:after{
+			content: "";
+			display: block;
+			width: 60px;
+			height: 3px;
+			background-color: #fff;
+			margin: 40px auto;
+		}
+		.intro_subtitle{
+			font-size: 50px;
+			color: #fff;
+			font-family: "Kaushan Script";
+		}
+		/* Learn button */
+		#learn_button{
+			display: inline-block;
+			vertical-align: top;
+			padding: 8px 30px;
+
+			border: 3px solid #fff;
+
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			text-transform: uppercase;
+
+			transition: background .1s linear, color .1s linear;
+		}
+		#learn_button:hover{
+			background-color: #fff;
+			color: #333;
+		}
+		.slider_inner{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 80px;
+		}
+		.slider_item{
+			width: 22%;
+			padding: 20px 0;
+			position: relative;
+
+			border-top: 3px solid #fff;
+			opacity: 0.7;
+
+			font-size: 18px;
+			color: #fff;
+			text-transform: uppercase;
+		}
+		.slider_item.active{
+			opacity: 1;
+		}
+		.slider_item.active:before{
+			content: "";
+			display: block;
+		 	width: 70px;
+		 	height: 3px;
+
+		 	background-color: darkred;
+
+		 	position: absolute;
+		 	top: -3px;
+		 	left: 0;
+		 	z-index: 1;	
+		}
+		.slider_num{
+			font-size: 24px;
+			font-weight: 700;
+
+		}
+		/* About */
+		#about{
+			padding: 50px 5px;
+		}
+		#about_section{
+			width: 100%;
+			max-width: 950px;
+			margin: 20px auto 40px;
+			text-align: center;
+		}
+		#about_title{
+			font-family: "Kaushan Script";
+		}
+		#about_title:after{
+			content: "";
+			display: block;
+			width: 60px;
+			height: 3px;
+			margin: 30px auto;
+			background-color: darkred;
+		}
+		#about_text{
+			color: #999;
+			font-size: 15px;
+			font-family: helvetica;
+		}
+		.about_inner{
+			display: flex;
+			width: 100%;
+			max-width: 1200px;
+		}
+		.about_item{
+			flex: 1;
+			border-right: 1px solid #999;
+			padding: 10px 30px 0;
+			color: #999;
+		}
+		.about_buttons{
+			padding: 10px 30px 0;
+			display: grid;
+			grid-template-rows: auto auto;
+			grid-gap: 20px;
+		}
+		.about_bt{
+			padding: 15px 30px;
+
+			border: 3px solid darkred;
+			color: darkred;
+			font-weight: 700;
+
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.about_bt:hover{
+			color: white;
+			background-color: darkred;
+
+			transition: background .1s linear, color .1s linear
+		}
+
+		/* Elements cakes */
+
+		.section_elements{
+			display: grid;
+			grid-template-columns: auto auto auto auto auto;
+			grid-gap: 10px;
+		}
+
+		.section_element:hover{
+			opacity: 0.8;
+			transition: border .1s linear, opacity .1s linear;
+		}
+
+		.section_more_photos{
+			margin-top: 50px;
+			text-align: center;
+		}
+
+		.section_photo_button{
+			color: darkred;
+			text-transform: uppercase;
+			border: 3px solid darkred;
+			padding: 10px 20px;
+		}
+
+		.section_photo_button:hover{
+			color: #fff;
+			background-color: darkred;
+			transition: background .2s linear, color .1s linear;
+		}
+
+		/* Receip of Pizza */
+
+		.receips_inner{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			width: 100%;
+			max-width: 1200px;
+		}
+
+		.receips_item{
+			margin: 20px 10px;
+			position: relative;
+		}
+
+		.receips_item:hover .receip_item_pizza{
+			transform: translate(-10px, -10px);
+		}
+
+		.receips_item:hover .receip_item_pizza img{
+			opacity: 0.3;
+		}
+
+		.receip_item_pizza {
+			background: linear-gradient(#a90000, #ef5959);
+			transition: transform .2s linear;
+		}
+
+		.receip_item_pizza img{
+			display: block;
+		}
+
+		.receips_text_stuffing{
+			color: #fff;
+			font-size: 17px;
+			font-family: "Kaushan Script";
+			opacity: 0;
+
+			position: absolute;
+			margin: 0 10px;
+			top:0;
+			left: 0;
+			z-index: 2;
+			transform: translate(-10px, -10px);
+			transition: opacity .2s linear;
+		}
+
+		.receips_item:hover .receips_text_stuffing{
+			opacity: 1; /* чтобы текст был виден */
+			transition: opacity .2s linear;
+		}
+
+		.receips_text {
+			font-family: "Kaushan Script";
+		}
+
+		/* Element image cupcake */
+
+		.elements_item{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.elements_item_card{
+			border: 5px solid darkred;
+			padding: 10px 20px;
+			margin: 15px;
+		}
+
+		.elements_item_card_text, .elements_item_card_price{
+			font-family: "Kaushan Script";
+			font-size: 20px;
+		}
+
+		.elements_item_card:hover{
+			border: 5px solid indianred;
+			opacity: 0.8;
+		}
+
+		/* Footer */
+
+		.footer{
+			background-color: indianred;
+			position: relative;
+			bottom: 0;
+		}
+
+		.footer_inner{
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 20px;
+			margin-top: 20px;
+		}
+
+	</style>
+	<script src="script1.js">
+		
+	</script>
+	</head>
+<body>
+
+<div class="header">
+	<div class="header_in">
+		<div class="logo_container">
+			<img src="logotip.png" width="70px" height="70px">
+		</div>
+
+		<ul class="nav">
+			<li><a class="nav_link" href="#">Home</a></li>
+			<li><a class="nav_link" href="ListPage.html">Menu</a></li>
+			<li><a class="nav_link" href="#">About Us</a></li>
+			<li><a class="nav_link" href="#">Contacts</a></li>
+		</ul>
+
+	</div>
+</div>
+
+<div class="intro">
+	<div class="container">
+		<div class="intro_inner">
+			<h2 class="intro_subtitle">Creative pastry shop</h2>
+			<h1 class="intro_title">Welcome to baker's</h1>
+
+			<a id="learn_button" href="#">Learn More</a>
+		</div>
+	</div>
+
+	<div class="slider">
+		<div class="container">
+			<div class="slider_inner">
+				<div class="slider_item active">
+					<span class="slider_num">01 </span>
+					Intro
+				</div>
+				<div class="slider_item">
+					<span class="slider_num">02 </span>
+					About Us
+				</div>
+				<div class="slider_item">
+					<span class="slider_num">03 </span>
+					Menu
+				</div>
+				<div class="slider_item">
+					<span class="slider_num">04 </span>
+					Contacts
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<section id="about">
+	<div class="container">
+
+		<div id="about_section">
+			<h1 id="about_title">ABOUT US</h1>
+			<div id="about_text">
+				<p >We are not just a bakery, we are not just bakers.</p>
+			</div>
+	    </div>
+
+
+		<div class="about_inner">
+
+			<div class="about_item">
+				<p class="about_text">In fact, we are just like you, a bunch of food lovers fascinated with sweet indulgence, who dreamt of creating an appetizing fairy land of divine delicacies that relishes the utmost desires.</p>
+			</div>
+
+			<div class="about_item">
+				<p class="about_text"> We located Almaty city Al-Farabi street. We invite you to our bakery, our team will certainly wait for you. </p>
+			</div>
+
+			<div class="about_buttons">
+				<a class="about_bt" href="registration.html">Registration</a>
+				<a class="about_bt" href="#">Add</a>
+			</div>
+
+			<div class="about_image">
+				<img src="shop.jpg" width="350px" height="200px">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+
+		<div id="about_section">
+			<h1 id="about_title">Design of cakes</h1>
+	    </div>
+
+		<div class="section_elements">
+
+			<div class="section_element">
+				<img src="type1.jpg" width="230px" height="345px">
+			</div>
+			<div class="section_element">
+				<img src="type2.jpg" width="230px" height="345px">
+			</div>
+
+			<div class="section_element">
+				<img src="type3.jpg" width="230px" height="345px">
+			</div>
+
+			<div class="section_element">
+				<img src="type4.jpg" width="230px" height="345px">
+			</div>
+
+			<div class="section_element">
+				<img src="type5.jpg" width="230px" height="345px">
+			</div>
+
+			<div class="section_element">
+				<img src="type6.jpg" width="230px" height="345px">
+			</div>
+
+			<div class="section_element">
+				<img src="type7.jpg" width="230px" height="345px">
+			</div>
+
+			<div class="section_element">
+				<img src="type8.jpg" width="230px" height="345px">
+			</div>
+
+			<div class="section_element">
+				<img src="type9.jpg" width="230px" height="345px">
+			</div>
+
+			<div class="section_element">
+				<img src="type10.jpg" width="230px" height="345px">
+			</div>
+		</div>
+
+		<div class="section_more_photos">
+			<a id="photo_button" class="section_photo_button" onclick="onClickFn()">More photos</a>
+		</div>
+
+	</div>
+</section>
+
+<section class="receips">
+	<div class="container">
+
+		<div id="about_section">
+			<h1 id="about_title">Receips of Pizza</h1>
+	    </div>
+		
+		<div class="receips_inner">
+				<div class="receips_item">
+					<div class="receip_item_pizza">
+						<img src="pizza1.jpg" width="350px" height="230px">
+					</div>
+					<div class="receips_text">
+						<h4>Для теста:</h4>
+						<p>Мука - 150 г (1 стакан 250 мл)</p>
+						<p>Дрожжи сухие - 3 г</p>
+						<p>Вода - 80 мл</p>
+						<p>Масло подсолнечное или оливковое - 1 ст. ложка</p>
+						<p>Соль - 0,25 ч. ложки</p>
+						<p>Сахар - 0,5 ч. ложки</p>
+						<div class="receips_text_stuffing">
+							<h4>Для начинки:</h4>
+							<p>Сыр твёрдый - 100 г</p>
+							<p>Колбаса - 100 г</p>
+							<p>Помидор (крупный) - 1 шт.</p>
+							<p>Кетчуп - 2 ст. ложки</p>
+							<p>Перец красный сладкий - 60 г</p>
+							<p>Масло сливочное - 25 г</p>
+							<p>Лук зелёный - по вкусу</p>
+						</div>
+					</div>
+				</div>
+				<div class="receips_item">
+					<div class="receip_item_pizza">
+						<img src="pizza2.jpg" width="350px" height="230px">
+					</div>
+					<div class="receips_text">
+						<h4>Для теста:</h4>
+						<p>Мука - 400 г + для посыпания противня</p>
+						<p>Соль - 1 ч. ложка</p>
+						<p>Разрыхлитель - 1 ч. ложка (с горкой)</p>
+						<p>Вода - 200 мл</p>
+						<p>Масло растительное - 5 ч. ложек + для</p>
+						<p>смазывания противня</p>
+						<div class="receips_text_stuffing">
+							<h4>Для начинки:</h4>
+							<p>Колбаса</p>
+							<p>Сыр твёрдый</p>
+							<p>Соус томатный - 2 ст. ложки</p>
+							<p>Лук репчатый - 1 шт.</p>
+							<p>Перец сладкий - 1 шт.</p>
+							<P>Орегано - 0,5 ч. ложки</P>
+						</div>
+					</div>
+				</div>
+				<div class="receips_item">
+					<div class="receip_item_pizza">
+						<img src="pizza3.jpg" width="350px" height="230px">
+					</div>
+					<div class="receips_text">
+						<h4>Для теста:</h4>
+						<p>Яйцо - 1 шт.</p>
+						<p>Мука - 2-3 стакана</p>
+						<p>Масло растительное - 2 ст. л.</p>
+						<p>Вода - 200 мл</p>
+						<p>Соль - 1 ч. л.</p>
+						<p>Сахар - 1 ст. л.</p>
+						<div class="receips_text_stuffing">
+							<h4>Для начинки:</h4>
+							<p>Сыр моцарелла - 300 г</p>
+							<p>Сыр твердый - 200 г</p>
+							<p>Помидоры - 2-3 шт.</p>
+							<p>Колбаса вареная - 200-250 г</p>
+							<p>Колбаса копченая</p>
+							<p>Грибы шампиньоны</p>
+							<p>Соус томатный</p>
+						</div>
+					</div>
+				</div>
+				<div class="receips_item">
+					<div class="receip_item_pizza">
+						<img src="pizza4.jpg" width="320px" height="425px">
+					</div>
+					<div class="receips_text">
+						<div class="receips_text_stuffing">
+							<h4>Для теста:</h4>
+							<p>вода 250 мл</p>
+							<p>мука 500 г</p>
+							<p>дрожжи живые 25 г (или 7 г сухих)</p>
+							<p>масло оливковое 20 г</p>
+							<p>сахар 5 г (1/2 ч. ложки)</p>
+							<p>соль 5 г (1/2 ч. ложки)</p>
+							<h4>Для начинки:</h4>
+							<p>Колбаса</p>
+							<p>Сыр</p>
+							<p>Огурцы солёные</p>
+							<p>Кетчуп</p>
+							<p>Майонез</p>
+						</div>
+					</div>
+				</div>
+				<div class="receips_item">
+					<div class="receip_item_pizza">
+						<img src="pizza5.jpg" width="320px" height="425px">
+					</div>
+					<div class="receips_text">
+						<div class="receips_text_stuffing">
+							<h4>Для теста:</h4>
+							<p>Мука - 400 г + для посыпания противня
+							<p>Соль - 1 ч. ложка
+							<p>Разрыхлитель - 1 ч. ложка (с горкой)
+							<p>Вода - 200 мл
+							<p>Масло растительное - 5 ч. ложек + для смазывания противня
+							<h4>Для начинки:</h4>
+							<p>Колбаса</p>
+							<p>Сыр твёрдый</p>
+							<p>Соус томатный - 2 ст. ложки</p>
+							<p>Лук репчатый - 1 шт.</p>
+							<p>Перец сладкий - 1 шт.</p>
+							<p>Орегано - 0,5 ч. ложки</p>
+						</div>
+					</div>
+				</div>
+				<div class="receips_item">
+					<div class="receip_item_pizza">
+						<img src="pizza6.jpg" width="320px" height="425px">
+					</div>
+					<div class="receips_text">
+						<div class="receips_text_stuffing">
+							<h4>Для теста:</h4>
+							<p>мука-300гр</p>
+							<p>соль-1/2ч.л.</p>
+							<p>ч.л. дрожжи сухие-2</p>
+							<p>мл. вода (теплая)-180</p>
+							<p>ст.л. масло раст.-2</p>
+							<h4>Для начинки:</h4>
+							<p>гр колбаса-200</p>
+							<p>шт яйцо-1</p>
+							<p>ст.л. майонез-1</p>
+							<p>лук-1шт</p>
+							<p>томатная паста - 1,5 ст.л</p>
+							<p>100 гр. сыр-шт Огурец соленый-1</p>
+							<p>на вкус чеснок, специи</p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</section>
+
+<section class="elements">
+	<div class="container">
+
+		<div id="about_section">
+			<h1 id="about_title">Popular pastries</h1>
+	    </div>
+
+		<div class="elements_inner">
+			<div class="elements_item">
+				<a class="elements_item_card" href="#">
+					<div class="elements_item__card_image">
+						<img src="card1.jpg" width="270px" height="380px">
+					</div>
+					<div class="elements_item_card_text">Lemon</div>
+					<div class="elements_item_card_price">500$</div>
+				</a>
+
+				<a class="elements_item_card" href="#">
+					<div class="elements_item_card_image">
+						<img src="card3.jpg" width="270px" height="380px">
+					</div>
+					<div class="elements_item_card_text">Chocolate</div>
+					<div class="elements_item_card_price">500$</div>
+				</a>
+
+				<a class="elements_item_card" href="#">
+					<div class="elements_item_card_image">
+						<img src="card4.jpg" width="270px" height="380px">
+					</div>
+					<div class="elements_item_card_text">Strawberry</div>
+					<div class="elements_item_card_price">500$</div>
+				</a>
+			</div>	
+		</div>
+	</div>
+</section>
+
+<div></div>
+
+
+<div class="footer"> 
+	<div class="container">
+		<div class="footer_inner">
+			<div class="footer_item">
+				<p>Find Us:
+					<a href=""><img id="icon" src="insta.png" width="20px" height="20px"></a>
+					<a href=""><img id="icon" src="face.png" width="20px" height="20px"></a>
+				</p>
+			</div>
+			<div class="footer_item">
+				<p>Contacts:  +7 701 777 77 77</p>
+			</div>
+			<div class="footer_item">
+				<p>Location:  Kazakhstan, Almaty</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
