@@ -1,10 +1,10 @@
-const express = require('express');
+/*const express = require('express');
 const router = express.Router();
 
 
 const app = express();
 
-/*router.get('/authorization', (req, res)=>{
+router.get('/authorization', (req, res)=>{
 	if(req.authorized){
 		
 		res.redirect('/firstPage.html');
@@ -13,7 +13,7 @@ const app = express();
 	else{
 		console.log("You are not authorized");
 	}
-});*/
+});
 
 
-module.exports = router;
+module.exports = router;*/

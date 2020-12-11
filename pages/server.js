@@ -22,19 +22,42 @@ var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
 
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var data = db.db("Cakes");
 
-function autho(req, res, next){
-	console.log("hello middleware");
-	req.siteName = "SDU Portal";
-	if(req.session.number){
+  app.get('/search', (request, response) => {
+    response.render('search.handlebars', {style: 'search.css'});
+  });
 
-		req.authorized = true;
-	}
-	else{
-		req.authorized = false;
-	}
-	next();
-}
+  app.post('/cake', (request, response)=>{
+  	var query = {name:request.body.search};
+    data.collection("collection").find(query).toArray((error, result)=>{
+      if(err) throw err;
+    	console.log(result);
+    	response.render('search', {search: result, style: 'search.css'});
+  	});
+  });
+
+
+  app.get('/list', (request, response)=>{
+  	data.collection("collection").find({}).toArray((error, result)=>{
+  		if(err) throw err;
+    	response.render('listPage', {listPage: result, style: 'listPage.css'});
+  	});
+  });
+
+  app.post('/item', (request, response)=>{
+  	const menu_list = request.body.menu;
+  	console.log(menu_list);
+  	data.collection("collection").find({type: menu_list}).toArray((error, result)=>{
+  		if(err) throw err;
+  		response.render('listPage', {listPage: result, style: 'listPage.css'});
+  	})
+  })
+});
+
+
 	
 
 const cookieParser = require('cookie-parser');
@@ -48,7 +71,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-app.use(autho);
 app.use(router.router);
 app.listen(8008, ()=>{
 	console.log("Listening...");

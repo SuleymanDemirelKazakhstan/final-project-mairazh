@@ -1,0 +1,201 @@
+        /*Search page*/
+        body{
+            margin:0;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333;
+            position: relative;
+        }
+
+        *{
+            margin: 0;
+            padding:0;
+            list-style:none;
+            text-decoration: none;
+        }
+
+        *, *:before, *:after{
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /* header */
+
+        .header{
+            width: 100%;
+            height: 80px;
+            display: block;
+            background-color: darkred;/*#101010;*/
+        }
+
+        .header_in{
+            width: 1000px;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .logo_container{
+            height: 100%;
+            display: table;
+            float: left;
+        }
+
+        .logo_container img{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .nav{
+            float: right;
+            height: 100%;
+        }
+
+        .nav li{
+            height: 100%;
+            display: table;
+            float: left;
+            padding: 0px 20px;
+        }
+
+        .nav li:last-child{
+            padding-right:0;
+        }
+        .nav li a{
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            color: white;
+            font-family: "Kaushan Script";
+            font-size: 16px;
+        }
+        .nav_link:after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: indianred;
+            opacity: 0;
+            transition: opacity .2s linear
+        }
+        a.nav_link:hover{
+            color: indianred;
+        }
+        a.nav_link:hover:after{
+            opacity: 1;
+        }
+
+
+        /*Container*/
+
+        .container{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+        /*search*/
+
+
+        .search{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .search .txt{
+            border-radius: 25px;
+            border: 3px solid darkred;
+            width: 300px;
+            height: 50px;
+        }
+
+        .search .find{
+            border-radius: 5px;
+            border: 3px solid darkred;
+            width: 80px;
+            height: 30px;
+        }
+
+        .icon_search{
+            background: none;
+            border: none;
+        }
+
+        .search_button{
+            position: absolute;
+            top:19px;
+            right:33%;
+        }
+
+        /* Cake item*/
+        
+        .list_title{
+            font-family: cinzel;
+            margin: 30px 10px 10px;
+        }
+
+        .list_cake_items{
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 20px;
+        }
+
+        .list_cake_item{
+            box-shadow: 5px 5px 5px 5px rgba(28,24,25,.15);
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .list_item_text{
+            position: absolute;
+            top: 0px;
+            right: 495px;
+
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            width: 100%;
+            max-width: 115px;
+
+            text-align: center;
+            color: white;
+
+            font-family: 'Kaushan Script';
+        }
+
+        .list_cake_price{
+            position: absolute;
+            top:90%;
+            right: 495px;
+
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            width: 100%;
+            max-width: 115px;
+
+            text-align: center;
+            color: white;
+
+            font-family: 'Kaushan Script';
+        }
+
+        /*Footer*/
+
+        .footer{
+            background-color: indianred;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .footer_inner{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+            margin: 10px 0;
+        }
+

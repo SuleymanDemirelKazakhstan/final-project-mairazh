@@ -1,0 +1,62 @@
+<div class="header">
+	<div class="header_in">
+		<div class="logo_container">
+			<img src="logotip.png" width="70px" height="70px">
+		</div>
+
+		<ul class="nav">
+			<li><a class="nav_link" href="/firstPage.html">Home</a></li>
+			<li><a class="nav_link" href="/list">Menu</a></li>
+			<li><a class="nav_link" href="/firstPage.html#about_section">About Us</a></li>
+			<li><a class="nav_link" href="#">Contacts</a></li>
+			<li><a class="nav_link" href="/search">Search</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="section_search">
+	<div class="container">
+		<form method="POST" action="cake">
+			<div class="search">
+				<input class="txt" type="text" name="search" placeholder="    Search...">
+					<div class="search_button">
+						<button class="icon_search" title="Search">
+							<img src="search.png" width="20px" height="20px">
+						</button>
+					</div>
+			</div>
+		</form>
+
+		{{#each search}}
+			<div class="list_cake_item">
+				<div class="list_item_image">
+					<img src="{{image_url}}" width="210px" height="315px">
+				</div>
+			<div class="list_item_text">{{name}}</div>
+			<div class="list_cake_price">{{price}}</div>
+			</div>
+		{{/each}}
+</section>
+	</div>
+</div>
+
+
+
+<div class="footer"> 
+	<div class="container">
+		<div class="footer_inner">
+			<div class="footer_item">
+				<p>Find Us:
+					<a href=""><img id="icon" src="insta.png" width="20px" height="20px"></a>
+					<a href=""><img id="icon" src="face.png" width="20px" height="20px"></a>
+				</p>
+			</div>
+			<div class="footer_item">
+				<p>Contacts:  +7 701 777 77 77</p>
+			</div>
+			<div class="footer_item">
+				<p>Location:  Kazakhstan, Almaty</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -44,28 +44,28 @@ router.get('/login', (req, res)=>{
 
 
 router.post('/user_new', (req, res)=>{
-const num = req.body.number;
-const query = {name:num};
+const num = req.body.name;
 
+const query = {name: num};
+console.log(query);
 data.collection("users").find(query).toArray(function(err, result){
-	console.log()
+	console.log(result);
 	if(result.length==0){
 
 		const user = new User({
-		number: num
+			number: num
 		});
 
+		req.session.number = num;
+
 		user.save((err)=>{
-
 		if(err) console.log("Еrror occur...");
-
 		});
 		console.log("saved...");
 		res.redirect('/firstPage.html');
-
+		
 	} else{
-		console.log("this number in database");
-		req.session.number = result[0].number;
+		console.log("this number is in database");
 		res.redirect('/firstPage.html');
 	}
 });
