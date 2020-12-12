@@ -22,9 +22,11 @@
 				<div class="elements">
 					<a href="/{{path}}" class="element_name" name="{{name}}">{{name}}</a>
 				</div>
+				<form action="delete" method="POST">
 				<div class="delete">
 					<button name="{{name}}" class="delete_button">Delete</button>
 				</div>
+				</form>
 			</div>
 		{{/each}}
 		</div>

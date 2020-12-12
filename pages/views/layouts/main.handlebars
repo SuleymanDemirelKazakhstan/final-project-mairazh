@@ -188,7 +188,7 @@
 
         .footer_admin{
             background-color: indianred;
-            position: fixed;
+            position: relative;
             bottom: 0;
         }
 
@@ -198,6 +198,48 @@
             padding: 20px 20px;
             margin-top: 20px;
         }
+
+        @media only screen and (max-width: 600px){
+            .nav{
+                float: right;
+                height: 100%;
+                max-width: 900px;
+                width: 100%;
+            }
+            .nav li{
+                height: 100%;
+                display: table;
+                float: left;
+                padding: 0px 20px;
+            }
+            .nav li:last-child{
+                padding-right:0;
+            }
+            .nav li a{
+                display: table-cell;
+                vertical-align: middle;
+                height: 100%;
+                color: white;
+                font-family: "Kaushan Script";
+                font-size: 16px;
+            }
+            .nav_link:after{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: indianred;
+                opacity: 0;
+                transition: opacity .2s linear
+            }
+            a.nav_link:hover{
+                color: indianred;
+            }
+            a.nav_link:hover:after{
+                opacity: 1;
+            }
+        }
+
 
 
     </style>

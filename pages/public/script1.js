@@ -22,6 +22,7 @@ function onProcess(text){
 
 		var images = document.createElement("img");
 		images.setAttribute("src", txt[i]["image_url"]);
+		images.setAttribute("class", "image_el");
 
 		images.style.width = "230px";
 		images.style.height = "345px";

@@ -1,4 +1,4 @@
-body{
+		body{
 			margin:0;
 			font-family: 'Montserrat', sans-serif;
 
@@ -13,10 +13,10 @@ body{
 			text-decoration: none;
 		}
 
-		*, *:before, *:after{
+		/**, *:before, *:after{
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
-		}
+		}*/
 		/* header */
 		.header{
 			width: 100%;
@@ -361,4 +361,131 @@ body{
 			justify-content: space-between;
 			padding: 20px 20px;
 			margin-top: 20px;
+		}
+
+
+		@media only screen and (max-width: 600px){
+			.intro{
+				width: 100%;
+				height: 75vh;
+
+				background: url('background.jpg') center no-repeat;
+				-webkit-background-size: cover;
+				background-size: cover;
+
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.intro_inner{
+				width: 100%;
+				max-width: 500px;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 30px;
+			}
+			.intro_title{
+
+				font-size: 60px;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: #fff;
+				line-height: 1;
+			}
+			.intro_title:after{
+				content: "";
+				display: block;
+				width: 45px;
+				height: 2px;
+				background-color: #fff;
+				margin: 40px auto;
+			}
+			.intro_subtitle{
+				font-size: 20px;
+				color: #fff;
+				font-family: "Kaushan Script";
+			}
+			/* Learn button */
+			#learn_button{
+				display: inline-block;
+				vertical-align: top;
+				padding: 5px 20px;
+
+				border: 3px solid #fff;
+
+				font-size: 14px;
+				font-weight: 700;
+				color: #fff;
+				text-transform: uppercase;
+
+				transition: background .1s linear, color .1s linear;
+			}
+			.nav{
+				float: right;
+				height: 100%;
+				max-width: 900px;
+				width: 100%;
+			}
+			.nav li{
+				height: 100%;
+				display: table;
+				float: left;
+				padding: 0px 20px;
+			}
+			.nav li:last-child{
+				padding-right:0;
+			}
+			.nav li a{
+				display: table-cell;
+				vertical-align: middle;
+				height: 100%;
+				color: white;
+				font-family: "Kaushan Script";
+				font-size: 16px;
+			}
+			.nav_link:after{
+				content: "";
+				display: block;
+				width: 100%;
+				height: 3px;
+				background-color: indianred;
+				opacity: 0;
+				transition: opacity .2s linear
+			}
+			a.nav_link:hover{
+				color: indianred;
+			}
+			a.nav_link:hover:after{
+				opacity: 1;
+			}
+
+			.about_buttons{
+				padding: 10px 30px 0;
+				display: grid;
+				grid-template-columns: auto;
+				grid-gap: 20px;
+			}
+			.about_image{
+				display: none;
+			}
+			.section_elements{
+				display: grid;
+				grid-template-columns: auto auto;
+				grid-gap: 5px;
+				margin-right: 10px;
+			}
+			
+			.receips{
+				display: none;
+			}
+			.img_el{
+				width:110px;
+				height: 190px;
+			}
+			.elements_item_card{
+				border: 5px solid darkred;
+				padding: 10px 20px;
+				margin: 8px;
+			}
+
 		}

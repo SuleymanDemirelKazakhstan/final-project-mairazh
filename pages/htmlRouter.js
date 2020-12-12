@@ -31,10 +31,14 @@ MongoClient.connect(url, function(err, db) {
   	});
   });
 
-  router.get('/:path', (request, response)=>{
+  router.post('/delete/:path', (request, response)=>{
 
-  	data.collection("collection").deleteOne({path: request.params.path})
+  	data.collection("collection").find({path: request.params.path}).toArray((err, result)=>{
+  		console.log({path: request.params.path});
   		if(err) throw err;
+  		data.collection("collection").deleteOne(result);
+  	});
+  	
   });
 
 });

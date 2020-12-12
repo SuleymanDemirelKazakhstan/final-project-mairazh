@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+	<style>
+
+		body{
+			margin:0;
+			font-size: 15px;
+			line-height: 1.7;
+			color: #333;
+			position: relative;
+		}
+
+		*{
+			margin: 0;
+			padding:0;
+			list-style:none;
+			text-decoration: none;
+		}
+
+		*, *:before, *:after{
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		/* header */
+
+		.header{
+			width: 100%;
+			height: 80px;
+			display: block;
+			background-color: darkred;/*#101010;*/
+		}
+
+		.header_in{
+			width: 1000px;
+			height: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+
+		.logo_container{
+			height: 100%;
+			display: table;
+			float: left;
+		}
+
+		.logo_container img{
+		    display: table-cell;
+		    vertical-align: middle;
+		}
+
+		.nav{
+			float: right;
+			height: 100%;
+		}
+
+		.nav li{
+			height: 100%;
+			display: table;
+			float: left;
+			padding: 0px 20px;
+		}
+
+		.nav li:last-child{
+			padding-right:0;
+		}
+		.nav li a{
+			display: table-cell;
+			vertical-align: middle;
+			height: 100%;
+			color: white;
+			font-family: "Kaushan Script";
+			font-size: 16px;
+		}
+		.nav_link:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: indianred;
+			opacity: 0;
+			transition: opacity .2s linear
+		}
+		a.nav_link:hover{
+			color: indianred;
+		}
+		a.nav_link:hover:after{
+			opacity: 1;
+		}
+
+		/*Container*/
+
+		.container{
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+
+		/*search*/
+
+
+		.search{
+			margin-top: 10px;
+			display: flex;
+			justify-content: center;
+			position: relative;
+		}
+
+		.search .txt{
+			border-radius: 25px;
+			border: 3px solid darkred;
+			width: 300px;
+			height: 50px;
+		}
+
+		.search .find{
+			border-radius: 5px;
+			border: 3px solid darkred;
+			width: 80px;
+			height: 30px;
+		}
+
+		.icon_search{
+			background: none;
+			border: none;
+		}
+
+		.search_button{
+			position: absolute;
+			top:15px;
+			right:40%;
+		}
+
+		/*Footer*/
+
+		.footer{
+			background-color: indianred;
+			position: fixed;
+			width: 100%;
+			bottom: 0;
+		}
+
+		.footer_inner{
+			display: flex;
+			justify-content: space-between;
+			padding: 5px 10px;
+			margin: 10px 0;
+		}
+
+	</style>
+</head>
+<body>
+
+<div class="header">
+	<div class="header_in">
+		<div class="logo_container">
+			<img src="logotip.png" width="70px" height="70px">
+		</div>
+
+		<ul class="nav">
+			<li><a class="nav_link" href="/firstPage.html">Home</a></li>
+			<li><a class="nav_link" href="#menu_lists">Menu</a></li>
+			<li><a class="nav_link" href="/firstPage.html#about_section">About Us</a></li>
+			<li><a class="nav_link" href="#">Contacts</a></li>
+			<li><a class="nav_link" href="/html/search.html">Search</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="section_search">
+	<div class="container">
+		<form method="POST" action="search.HTML/">
+			<div class="search">
+				<input class="txt" type="text" name="search" placeholder="    Search...">
+					<div class="search_button">
+						<button class="icon_search" title="Search">
+							<img src="search.png" width="20px" height="20px">
+						</button>
+					</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="footer"> 
+	<div class="container">
+		<div class="footer_inner">
+			<div class="footer_item">
+				<p>Find Us:
+					<a href=""><img id="icon" src="insta.png" width="20px" height="20px"></a>
+					<a href=""><img id="icon" src="face.png" width="20px" height="20px"></a>
+				</p>
+			</div>
+			<div class="footer_item">
+				<p>Contacts:  +7 701 777 77 77</p>
+			</div>
+			<div class="footer_item">
+				<p>Location:  Kazakhstan, Almaty</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
