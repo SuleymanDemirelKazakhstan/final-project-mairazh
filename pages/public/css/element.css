@@ -1,0 +1,164 @@
+		body{
+			margin:0;
+			font-size: 15px;
+			line-height: 1.7;
+			color: #333;
+			font-family: "Castoro";
+		}
+
+		*{
+			margin: 0;
+			padding:0;
+			list-style:none;
+			text-decoration: none;
+		}
+
+		*, *:before, *:after{
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		/* header */
+
+		.header{
+			width: 100%;
+			height: 80px;
+			display: block;
+			background-color: darkred;/*#101010;*/
+		}
+
+		.header_in{
+			width: 1000px;
+			height: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+
+		.logo_container{
+			height: 100%;
+			display: table;
+			float: left;
+		}
+
+		.logo_container img{
+		    display: table-cell;
+		    vertical-align: middle;
+		}
+
+		.nav{
+			float: right;
+			height: 100%;
+		}
+
+		.nav li{
+			height: 100%;
+			display: table;
+			float: left;
+			padding: 0px 20px;
+		}
+
+		.nav li:last-child{
+			padding-right:0;
+		}
+		.nav li a{
+			display: table-cell;
+			vertical-align: middle;
+			height: 100%;
+			color: white;
+			font-family: "Kaushan Script";
+			font-size: 16px;
+		}
+		.nav_link:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: indianred;
+			opacity: 0;
+			transition: opacity .2s linear
+		}
+		a.nav_link:hover{
+			color: indianred;
+		}
+		a.nav_link:hover:after{
+			opacity: 1;
+		}
+
+		/*container*/
+
+		.container{
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		/* heading */
+
+		.heading{
+			margin: 50px 0 20px;
+		}
+
+		.txt{
+			font-size: 45px;
+		}
+
+		/* Element */
+
+		.element_items{
+			display: flex;
+		}
+
+		.element_info{
+			margin-left: 60px;
+			margin-top: 20px;
+			padding: 10px;
+		}
+
+
+		.element_button{
+			margin: 50px 0 40px;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.element_image{
+			margin: 10px 10px 30px;
+		}
+
+		.element_image img{
+			border-radius: 20px;
+		}
+
+		.svg_icon, .element_price_rating{
+			margin-top: 20px;
+		}
+
+		.element_button a{
+			border: 3px solid darkred;
+			padding: 10px 50px;
+			background-color: indianred;
+			color: white;
+		}
+
+		.element_button:hover a{
+			background-color: darkred;
+			border: #333;
+		}
+		
+
+
+
+		/* footer */
+
+		.footer{
+			background-color: indianred;
+			position: relative;
+			bottom: 0;
+		}
+
+		.footer_inner{
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 20px;
+			margin-top: 20px;
+		}

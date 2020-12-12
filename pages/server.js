@@ -53,8 +53,18 @@ MongoClient.connect(url, function(err, db) {
   	data.collection("collection").find({type: menu_list}).toArray((error, result)=>{
   		if(err) throw err;
   		response.render('listPage', {listPage: result, style: 'listPage.css'});
-  	})
-  })
+  	});
+  });
+
+  app.get('/:path', (request, response)=>{
+  	const list_element = request.params.path;
+  	console.log(list_element);
+  	data.collection("collection").find({path: list_element}).toArray((error, result)=>{
+  		console.log(result);
+  		if(err) throw err;
+  		response.render('elementPage', {elementPage: result, style: 'element.css'});
+  	});
+  });
 });
 
 

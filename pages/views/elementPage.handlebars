@@ -1,0 +1,77 @@
+<div class="header">
+	<div class="header_in">
+		<div class="logo_container">
+			<img src="logotip.png" width="70px" height="70px">
+		</div>
+
+		<ul class="nav">
+			<li><a class="nav_link" href="/firstPage.html">Home</a></li>
+			<li><a class="nav_link" href="/list">Menu</a></li>
+			<li><a class="nav_link" href="/firstPage.html#about_section">About Us</a></li>
+			<li><a class="nav_link" href="#">Contacts</a></li>
+			<li><a class="nav_link" href="/search">Search</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="element">
+	<div class="container">
+		{{#each elementPage}}
+		<div class="heading">
+			<div class="header_text"><p class="txt">{{name}}</p></div>
+		</div>
+		
+		<div class="element_items">
+			<div class="element_image">
+				<img src="{{image_url}}" width="380px" height="500px" />
+			</div>
+			<div class="element_info">
+				<div class="element_definition">This is a very sweet frosting - it reminds me of maple candy.</div>
+
+				<div class="svg_icon">
+					<svg id="color" enable-background="new 0 0 24 24" height="40" viewBox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><path d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z" fill="#ffc107"/></svg>
+				</div>
+
+
+				<div class="element_price_rating">
+					<div class="element_price"><strong>Price: {{price}}</strong></div>
+					<div class="element_rating"><strong>Ratings:</strong> </div>
+				</div>
+				<div class="element_button">
+					<div class="element_buy"><a href="">Buy</a></div>
+					<div class="element_save"><a href="">Save</a></div>
+				</div>
+				{{/each}}
+				<div class="element_prep">
+					<strong>Preparation:</strong>
+					<a href="https://www.youtube.com/watch?v=xqA4fmXCSv8"> Ссылка для торта</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+
+<div class="footer"> 
+	<div class="container">
+		<div class="footer_inner">
+			<div class="footer_item">
+				<p>Find Us:
+					<a href=""><img id="icon" src="insta.png" width="20px" height="20px"></a>
+					<a href=""><img id="icon" src="face.png" width="20px" height="20px"></a>
+				</p>
+			</div>
+			<div class="footer_item">
+				<p>Contacts:  +7 701 777 77 77</p>
+			</div>
+			<div class="footer_item">
+				<p>Location:  Kazakhstan, Almaty</p>
+			</div>
+		</div>
+	</div>
+</div>
