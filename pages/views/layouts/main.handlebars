@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/{{style}}">
+    <script src="script1.js">
+        
+    </script>
     <style>
         #room{
             box-shadow: 0 5px 10px 0 rgba(28,24,25,.15);
@@ -54,6 +57,148 @@
             height: 30px;
             margin: 12px;
         }
+
+
+
+
+
+
+        body{
+            margin:0;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333;
+            font-family: "Castoro";
+        }
+
+        *{
+            margin: 0;
+            padding:0;
+            list-style:none;
+            text-decoration: none;
+        }
+
+        *, *:before, *:after{
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /* header */
+
+        .header{
+            width: 100%;
+            height: 80px;
+            display: block;
+            background-color: darkred;/*#101010;*/
+        }
+
+        .header_in{
+            width: 1000px;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .logo_container{
+            height: 100%;
+            display: table;
+            float: left;
+        }
+
+        .logo_container img{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .nav{
+            float: right;
+            height: 100%;
+        }
+
+        .nav li{
+            height: 100%;
+            display: table;
+            float: left;
+            padding: 0px 20px;
+        }
+
+        .nav li:last-child{
+            padding-right:0;
+        }
+        .nav li a{
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            color: white;
+            font-family: "Kaushan Script";
+            font-size: 16px;
+        }
+        .nav_link:after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: indianred;
+            opacity: 0;
+            transition: opacity .2s linear
+        }
+        a.nav_link:hover{
+            color: indianred;
+        }
+        a.nav_link:hover:after{
+            opacity: 1;
+        }
+
+        /*container*/
+
+        .container{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Elements */
+        .section_inner{
+            width: 100%;
+            max-width: 400px;
+            margin-top: 30px;
+        }
+        .list_elements{
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .delete_button{
+            background-color: darkred;
+            border: 2px solid darkred;
+            padding: 10px 20px;
+            margin: 10px;
+            color: white;
+            font-family: 'Cinzel';
+        }
+
+        .element_name{
+            color: darkred;
+            font-family: 'Kaushan Script';
+            font-size: 16px;
+        }
+
+        /*Footer*/
+
+        .footer_admin{
+            background-color: indianred;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .footer_inner{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 20px;
+            margin-top: 20px;
+        }
+
 
     </style>
 </head>

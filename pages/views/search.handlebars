@@ -5,9 +5,9 @@
 		</div>
 
 		<ul class="nav">
-			<li><a class="nav_link" href="/firstPage.html">Home</a></li>
+			<li><a class="nav_link" href="/">Home</a></li>
 			<li><a class="nav_link" href="/list">Menu</a></li>
-			<li><a class="nav_link" href="/firstPage.html#about_section">About Us</a></li>
+			<li><a class="nav_link" href="/#about_section">About Us</a></li>
 			<li><a class="nav_link" href="#">Contacts</a></li>
 			<li><a class="nav_link" href="/search">Search</a></li>
 		</ul>
@@ -27,14 +27,14 @@
 			</div>
 		</form>
 
-		{{#each search}}
-			<div class="list_cake_item">
-				<div class="list_item_image">
-					<img src="{{image_url}}" width="210px" height="315px">
-				</div>
-			<div class="list_item_text">{{name}}</div>
-			<div class="list_cake_price">{{price}}</div>
-			</div>
+		{{#each search}}			
+			<a href="/{{path}}" name="{{name}}" class="list_cake_item">
+					<div class="list_item_image">
+						<img src="{{image_url}}" width="210px" height="315px">
+					</div>
+				<div class="list_item_text">{{name}}</div>
+				<div class="list_cake_price">{{price}}</div>
+			</a>
 		{{/each}}
 </section>
 	</div>

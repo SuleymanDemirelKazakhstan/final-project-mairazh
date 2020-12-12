@@ -26,6 +26,18 @@ MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var data = db.db("Cakes");
 
+  /*app.get('/admin', (request, response)=>{
+  	data.collection("collection").find({}).toArray((error, result)=>{
+      if(err) throw err;
+    	console.log(result);
+    	response.render('admin', {admin: result, style: 'admin.css'});
+  	});
+  });*/
+
+  app.get('/', (request, response)=>{
+  	response.render('firstPAge', {style: 'first.css'});
+  });
+
   app.get('/search', (request, response) => {
     response.render('search.handlebars', {style: 'search.css'});
   });
@@ -35,6 +47,7 @@ MongoClient.connect(url, function(err, db) {
     data.collection("collection").find(query).toArray((error, result)=>{
       if(err) throw err;
     	console.log(result);
+
     	response.render('search', {search: result, style: 'search.css'});
   	});
   });

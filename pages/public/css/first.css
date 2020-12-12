@@ -1,0 +1,364 @@
+body{
+			margin:0;
+			font-family: 'Montserrat', sans-serif;
+
+			font-size: 15px;
+			line-height: 1.7;
+			color: #333;
+		}
+		*{
+			margin: 0;
+			padding:0;
+			list-style:none;
+			text-decoration: none;
+		}
+
+		*, *:before, *:after{
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		/* header */
+		.header{
+			width: 100%;
+			height: 80px;
+			display: block;
+			background-color: darkred;/*#101010;*/
+		}
+		.header_in{
+			width: 1000px;
+			height: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+		.logo_container{
+			height: 100%;
+			display: table;
+			float: left;
+		}
+		.logo_container img{
+		    display: table-cell;
+		    vertical-align: middle;
+		}
+		.nav{
+			float: right;
+			height: 100%;
+		}
+		.nav li{
+			height: 100%;
+			display: table;
+			float: left;
+			padding: 0px 20px;
+		}
+		.nav li:last-child{
+			padding-right:0;
+		}
+		.nav li a{
+			display: table-cell;
+			vertical-align: middle;
+			height: 100%;
+			color: white;
+			font-family: "Kaushan Script";
+			font-size: 16px;
+		}
+		.nav_link:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: indianred;
+			opacity: 0;
+			transition: opacity .2s linear
+		}
+		a.nav_link:hover{
+			color: indianred;
+		}
+		a.nav_link:hover:after{
+			opacity: 1;
+		}
+		/*container*/
+		.container{
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		/*Intro big image*/
+		.intro{
+			width: 100%;
+			height: 100vh;
+
+			background: url('background.jpg') center no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.intro_inner{
+			width: 100%;
+			max-width: 880px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.intro_title{
+			font-size: 110px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #fff;
+			line-height: 1;
+		}
+		.intro_title:after{
+			content: "";
+			display: block;
+			width: 60px;
+			height: 3px;
+			background-color: #fff;
+			margin: 40px auto;
+		}
+		.intro_subtitle{
+			font-size: 50px;
+			color: #fff;
+			font-family: "Kaushan Script";
+		}
+		/* Learn button */
+		#learn_button{
+			display: inline-block;
+			vertical-align: top;
+			padding: 8px 30px;
+
+			border: 3px solid #fff;
+
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			text-transform: uppercase;
+
+			transition: background .1s linear, color .1s linear;
+		}
+		#learn_button:hover{
+			background-color: #fff;
+			color: #333;
+		}
+		.slider_inner{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 80px;
+		}
+		.slider_item{
+			width: 22%;
+			padding: 20px 0;
+			position: relative;
+
+			border-top: 3px solid #fff;
+			opacity: 0.7;
+
+			font-size: 18px;
+			color: #fff;
+			text-transform: uppercase;
+		}
+		.slider_item.active{
+			opacity: 1;
+		}
+		.slider_item.active:before{
+			content: "";
+			display: block;
+		 	width: 70px;
+		 	height: 3px;
+
+		 	background-color: darkred;
+
+		 	position: absolute;
+		 	top: -3px;
+		 	left: 0;
+		 	z-index: 1;	
+		}
+		.slider_num{
+			font-size: 24px;
+			font-weight: 700;
+
+		}
+		/* About */
+		#about{
+			padding: 50px 5px;
+		}
+		#about_section{
+			width: 100%;
+			max-width: 950px;
+			margin: 20px auto 40px;
+			text-align: center;
+		}
+		#about_title{
+			font-family: "Kaushan Script";
+		}
+		#about_title:after{
+			content: "";
+			display: block;
+			width: 60px;
+			height: 3px;
+			margin: 30px auto;
+			background-color: darkred;
+		}
+		#about_text{
+			color: #999;
+			font-size: 15px;
+			font-family: helvetica;
+		}
+		.about_inner{
+			display: flex;
+			width: 100%;
+			max-width: 1200px;
+		}
+		.about_item{
+			flex: 1;
+			border-right: 1px solid #999;
+			padding: 10px 30px 0;
+			color: #999;
+		}
+		.about_buttons{
+			padding: 10px 30px 0;
+			display: grid;
+			grid-template-rows: auto auto;
+			grid-gap: 20px;
+		}
+		.about_bt{
+			padding: 15px 30px;
+
+			border: 3px solid darkred;
+			color: darkred;
+			font-weight: 700;
+
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.about_bt:hover{
+			color: white;
+			background-color: darkred;
+
+			transition: background .1s linear, color .1s linear
+		}
+
+		/* Elements cakes */
+
+		.section_elements{
+			display: grid;
+			grid-template-columns: auto auto auto auto auto;
+			grid-gap: 10px;
+		}
+
+		.section_element:hover{
+			opacity: 0.8;
+			transition: border .1s linear, opacity .1s linear;
+		}
+
+		.section_more_photos{
+			margin-top: 50px;
+			text-align: center;
+		}
+
+		.section_photo_button{
+			color: darkred;
+			text-transform: uppercase;
+			border: 3px solid darkred;
+			padding: 10px 20px;
+		}
+
+		.section_photo_button:hover{
+			color: #fff;
+			background-color: darkred;
+			transition: background .2s linear, color .1s linear;
+		}
+
+		/* Receip of Pizza */
+
+		.receips_inner{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			width: 100%;
+			max-width: 1200px;
+		}
+
+		.receips_item{
+			margin: 20px 10px;
+			position: relative;
+		}
+
+		.receips_item:hover .receip_item_pizza{
+			transform: translate(-10px, -10px);
+		}
+
+		.receips_item:hover .receip_item_pizza img{
+			opacity: 0.3;
+		}
+
+		.receip_item_pizza {
+			background: linear-gradient(#a90000, #ef5959);
+			transition: transform .2s linear;
+		}
+
+		.receip_item_pizza img{
+			display: block;
+		}
+
+		.receips_text_stuffing{
+			color: #fff;
+			font-size: 17px;
+			font-family: "Kaushan Script";
+			opacity: 0;
+
+			position: absolute;
+			margin: 0 10px;
+			top:0;
+			left: 0;
+			z-index: 2;
+			transform: translate(-10px, -10px);
+			transition: opacity .2s linear;
+		}
+
+		.receips_item:hover .receips_text_stuffing{
+			opacity: 1; /* чтобы текст был виден */
+			transition: opacity .2s linear;
+		}
+
+		.receips_text {
+			font-family: "Kaushan Script";
+		}
+
+		/* Element image cupcake */
+
+		.elements_item{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.elements_item_card{
+			border: 5px solid darkred;
+			padding: 10px 20px;
+			margin: 15px;
+		}
+
+		.elements_item_card_text, .elements_item_card_price{
+			font-family: "Kaushan Script";
+			font-size: 20px;
+		}
+
+		.elements_item_card:hover{
+			border: 5px solid indianred;
+			opacity: 0.8;
+		}
+
+		/* Footer */
+
+		.footer{
+			background-color: indianred;
+			position: relative;
+			bottom: 0;
+		}
+
+		.footer_inner{
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 20px;
+			margin-top: 20px;
+		}

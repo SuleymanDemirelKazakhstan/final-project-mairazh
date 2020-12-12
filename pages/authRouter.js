@@ -62,11 +62,11 @@ data.collection("users").find(query).toArray(function(err, result){
 		if(err) console.log("Еrror occur...");
 		});
 		console.log("saved...");
-		res.redirect('/firstPage.html');
+		res.redirect('/');
 		
 	} else{
 		console.log("this number is in database");
-		res.redirect('/firstPage.html');
+		res.redirect('/');
 	}
 });
 });

@@ -1,0 +1,52 @@
+<div class="header">
+	<div class="header_in">
+		<div class="logo_container">
+			<img src="logotip.png" width="70px" height="70px">
+		</div>
+
+		<ul class="nav">
+			<li><a class="nav_link" href="/">Home</a></li>
+			<li><a class="nav_link" href="/list">Menu</a></li>
+			<li><a class="nav_link" href="/#about_section">About Us</a></li>
+			<li><a class="nav_link" href="#">Contacts</a></li>
+			<li><a class="nav_link" href="/search">Search</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="section">
+	<div class="container">
+		<div class="section_inner">
+		{{#each admin}}
+			<div class="list_elements">
+				<div class="elements">
+					<a href="/{{path}}" class="element_name" name="{{name}}">{{name}}</a>
+				</div>
+				<div class="delete">
+					<button name="{{name}}" class="delete_button">Delete</button>
+				</div>
+			</div>
+		{{/each}}
+		</div>
+	</div>
+</div>
+
+<div class="footer_admin"> 
+	<div class="container">
+		<div class="footer_inner">
+			<div class="footer_item">
+				<p>Find Us:
+					<a href=""><img id="icon" src="insta.png" width="20px" height="20px"></a>
+					<a href=""><img id="icon" src="face.png" width="20px" height="20px"></a>
+				</p>
+			</div>
+			<div class="footer_item">
+				<p>Contacts:  +7 701 777 77 77</p>
+			</div>
+			<div class="footer_item">
+				<p>Location:  Kazakhstan, Almaty</p>
+			</div>
+		</div>
+	</div>
+</div>
+
