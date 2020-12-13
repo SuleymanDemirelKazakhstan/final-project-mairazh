@@ -44,7 +44,7 @@ MongoClient.connect(url, function(err, db) {
 
   app.post('/cake', (request, response)=>{
   	var query = {name:request.body.search};
-    data.collection("collection").find(query).toArray((error, result)=>{
+    data.collection("collections").find(query).toArray((error, result)=>{
       if(err) throw err;
     	console.log(result);
 
@@ -54,7 +54,7 @@ MongoClient.connect(url, function(err, db) {
 
 
   app.get('/list', (request, response)=>{
-  	data.collection("collection").find({}).toArray((error, result)=>{
+  	data.collection("collections").find({}).toArray((error, result)=>{
   		if(err) throw err;
     	response.render('listPage', {listPage: result, style: 'listPage.css'});
   	});
@@ -63,7 +63,7 @@ MongoClient.connect(url, function(err, db) {
   app.post('/item', (request, response)=>{
   	const menu_list = request.body.menu;
   	console.log(menu_list);
-  	data.collection("collection").find({type: menu_list}).toArray((error, result)=>{
+  	data.collection("collections").find({type: menu_list}).toArray((error, result)=>{
   		if(err) throw err;
   		response.render('listPage', {listPage: result, style: 'listPage.css'});
   	});
@@ -72,7 +72,7 @@ MongoClient.connect(url, function(err, db) {
   app.get('/:path', (request, response)=>{
   	const list_element = request.params.path;
   	console.log(list_element);
-  	data.collection("collection").find({path: list_element}).toArray((error, result)=>{
+  	data.collection("collections").find({path: list_element}).toArray((error, result)=>{
   		console.log(result);
   		if(err) throw err;
   		response.render('elementPage', {elementPage: result, style: 'element.css'});
